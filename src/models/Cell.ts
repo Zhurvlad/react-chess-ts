@@ -8,6 +8,16 @@ export class Cell {
     readonly color: Colors;
     figure: FIgure | null;
     board: Board;
-    id: number;
+    id: number; //Для реакт ключей
     available: boolean; //Можно ли перемещатся
+
+    constructor(board: Board, x: number, y: number, colors: Colors, figure: FIgure | null) {
+        this.x = x
+        this.y = y
+        this.color = colors
+        this.figure = figure
+        this.board = board
+        this.available = false
+        this.id = Math.random()
+    }
 }
